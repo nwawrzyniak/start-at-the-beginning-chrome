@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "js": [
-        "satb.js"
+        "content-scripts/satb.js"
       ],
       "matches": [
         "https://*.youtube.com/watch*"
@@ -24,6 +24,6 @@
     }
   ],
   "permissions": [
-    "tabs"
+    "activeTab"
   ]
 }
