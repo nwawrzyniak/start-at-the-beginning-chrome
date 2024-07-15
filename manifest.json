@@ -11,10 +11,10 @@
     "default_icon": "graphics/nav_bar.png"
   },
   "icons": {
-    "16": "graphics/satb_16.png",
-    "32": "graphics/satb_32.png",
-    "48": "graphics/satb_48.png",
-    "128": "graphics/satb_128.png"
+    "16": "graphics/16.png",
+    "32": "graphics/32.png",
+    "48": "graphics/48.png",
+    "128": "graphics/128.png"
   },
   "content_scripts": [
     {

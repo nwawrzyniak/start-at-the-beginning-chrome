@@ -3,10 +3,16 @@ function popup() {
 
   const checkbox = document.querySelector(".satb-switch input");
   chrome.storage.sync.get(["isActive"], function(result) {
-    if (result.isActive !== undefined) {
+    if (result.isActive === undefined) {
+      chrome.storage.sync.set({ isActive: true }, function() {
+        checkbox.checked = true;
+        console.log("isActive was undefined, set to true by default.");
+      });
+    } else {
       checkbox.checked = result.isActive;
     }
   });
+
   checkbox.addEventListener("change", function() {
     chrome.storage.sync.set({ isActive: checkbox.checked }, function() {
       console.log("The value is set to " + checkbox.checked);
