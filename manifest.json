@@ -3,6 +3,9 @@
   "name": "Start at the beginning",
   "description": "A Chrome extension that lets you start YouTube videos at the beginning.",
   "version": "1.0.0",
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": "graphics/nav_bar.png"
