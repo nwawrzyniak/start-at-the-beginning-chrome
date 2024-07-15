@@ -14,7 +14,8 @@
     "16": "graphics/16.png",
     "32": "graphics/32.png",
     "48": "graphics/48.png",
-    "128": "graphics/128.png"
+    "128": "graphics/128.png",
+    "256": "graphics/256.png"
   },
   "content_scripts": [
     {
