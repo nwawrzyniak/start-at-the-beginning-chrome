@@ -1,5 +1,6 @@
 function startAtTheBeginning() {
   console.info("DOM fully loaded and parsed. Beginning execution of script \"satb.js\".");
+
   const searchParams = new URLSearchParams(window.location.search);
   const v = searchParams.get("v");
   const t = searchParams.get("t");
@@ -7,7 +8,7 @@ function startAtTheBeginning() {
     // No t parameter found. Do nothing.
   }
   else if (t != "0s") {
-    window.open("https://www.youtube.com/watch?v=" + v + "&t=0s","_self");
+    window.open("https://www.youtube.com/watch?v=" + v + "&t=0s", "_self");
   }
 }
 
