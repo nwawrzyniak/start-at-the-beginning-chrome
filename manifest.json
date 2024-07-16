@@ -23,7 +23,11 @@
         "content-scripts/satb.js"
       ],
       "matches": [
-        "https://*.youtube.com/watch*"
+        "https://*.youtube.com/*"
+      ], 
+      "exclude_matches": [
+        "https://studio.youtube.com/*",
+        "https://*.youtube.com/embed*"
       ]
     }
   ]
