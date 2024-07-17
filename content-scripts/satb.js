@@ -9,12 +9,21 @@ function resetVideo() {
     if (list) {
       newUrl += "&list=" + list;
     }
+    console.log("satb: Reloading page to force t=0s.");
     window.open(newUrl, "_self");
   }
 }
 
 function startAtTheBeginning() {
-  console.info("DOM fully loaded and parsed. Beginning execution of script \"satb.js\".");
+  console.info("satb: DOM fully loaded and parsed. Beginning execution of script \"satb.js\".");
+
+  chrome.storage.sync.get(["isActive"], function (result) {
+    if (result.isActive === undefined) {
+      chrome.storage.sync.set({ isActive: true }, function () {
+        console.log("satb: isActive was undefined, set to true by default.");
+      });
+    }
+  });
 
   chrome.storage.sync.get(["isActive"], function(result) {
     if (result.isActive) {
@@ -26,6 +35,7 @@ function startAtTheBeginning() {
 
         if (v && v !== currentVideoId) {
           currentVideoId = v;
+          console.log("satb: currentVideoId has changed.");
           resetVideo();
         }
       }
