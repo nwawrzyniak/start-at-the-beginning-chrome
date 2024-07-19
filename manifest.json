@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Start at the beginning",
   "description": "A Chrome extension that lets you start YouTube videos at the beginning.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "permissions": [
     "storage"
   ],
@@ -17,6 +17,10 @@
     "128": "graphics/128.png",
     "256": "graphics/256.png"
   },
+  "background": {
+    "service_worker": "service-workers/icon.js",
+    "type": "module"
+  },
   "content_scripts": [
     {
       "js": [
@@ -30,5 +34,9 @@
         "https://*.youtube.com/embed*"
       ]
     }
-  ]
+  ],
+  "homepage_url": "https://www.nwawsoft.com,",
+  "author": {
+    "email": "team@nwawsoft.com"
+  }
 }
