@@ -5,7 +5,7 @@ function resetVideo() {
   const list = searchParams.get("list");
 
   if (v && (!t || t != "0s")) {
-    let newUrl = "https://www.youtube.com/watch?v=" + v + "&t=0s";
+    let newUrl = "/watch?v=" + v + "&t=0s";
     if (list) {
       newUrl += "&list=" + list;
     }
